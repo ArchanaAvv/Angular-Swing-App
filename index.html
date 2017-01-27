@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="card-stack-demo">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="angularswing.js"></script>
+
+    <script src="card.js"></script>
+</head>
+<body ng-controller="card-stack-playground">
+    <div class="row col-md-12 clr-red">
+        <h2 style="margin-left:1%;">Persuit</h2>
+    </div>
+    <div class="row col-md-12 clr-blue">
+        <span class="col-md-1"><b>SIGN IN</b></span>
+        <span class="col-md-2"><b>CREATE PROFILE</b></span>
+    </div>
+    <div class="container stack" swing-stack>
+        <h1 class="text-center">Current Openings</h1>
+        <p class="text-center">Postings {{i}} of {{len}}</p>
+        <div class="col-md-8 col-md-offset-2 border" swing-card 
+                swing-on-throwin="throwin(eventName, eventObject)">
+            <div class="row">
+                <h3 class="col-md-9">Senior Front End Developer/Lead WEB UI</h3>
+                <button class="btn btn-primary col-md-offset-1" style="margin-top:1%;">APPLY</button>
+            </div>
+            <p><b>Information Technology & Services</b></p>
+
+            <div class="row" style="margin-bottom:1%;">
+                <p class="col-md-3"><span class="glyphicon glyphicon-globe"> </span> San Francisco,CA</p>
+                <p class="col-md-3"><span class="glyphicon glyphicon-user"></span> John Smith</p>
+                <p class="col-md-3"><span class="glyphicon glyphicon-calendar"></span></p>
+                <p class="col-md-3"><span class="glyphicon glyphicon-file"></span> Contract</p>
+            </div>
+            <div class="hRule col-md-12"></div>
+            <div>
+                <p class="clr-text-red">SKILLS REQUIRED</p>
+                <p>{{card.skreq}}</p>
+            </div>
+            <div class="hRule col-md-12"></div>
+            <div>
+                <p class="clr-text-red">RESPONSIBILITIES</p>
+                <p>{{card.resp}}</p>
+                <p class="clr-text-red">MORE</p>
+            </div>
+            <div class="row selectIcon">
+                <div class="col-md-2 col-md-offset-1 text-center">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <p class="progress">NOT FOR ME-{{notinterested}}</p>
+                </div>
+                <div class="col-md-2 col-md-offset-2 text-center">
+                    <span class="glyphicon glyphicon-save"></span>
+                    <p class="progress">SAVE FOR LATER</p>
+                </div>
+                <div class="col-md-2 col-md-offset-2 text-center">
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                    <p class="progress">INTERESTED-{{interested}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

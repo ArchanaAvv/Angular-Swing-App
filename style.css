@@ -1,0 +1,36 @@
+*{
+  		font-family: sans-serif;
+  	}
+  	.clr-red{
+  		color: white;
+  		background-color: rgb(189,6,33);
+  	}
+  	.clr-blue{
+  		color: white;
+  		background-color: rgb(105,146,192);
+  		padding-top: 5px;
+  		padding-bottom: 5px;
+  	}
+  	.hRule{
+  		border:1px solid rgb(189,6,33);
+  		margin-bottom: 1%;
+  	}
+  	.clr-text-red{
+  		color: rgb(189,6,33);
+  		font-weight: bold;
+  	}
+  	.border{
+  		border: 1px solid black;
+  		border-radius: 3px;
+  	}
+  	.selectIcon,.progress{
+  		background-color: grey;
+  		color: white;
+  		font-weight: bold;
+  	}
+  	.selectIcon{
+  		padding-top:3%;
+  	}
+  	.progress{
+  		font-size: 10px;
+  	}
